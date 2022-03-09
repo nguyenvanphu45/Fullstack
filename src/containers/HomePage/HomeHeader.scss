@@ -52,3 +52,102 @@
         }
     }
 }
+
+.home-header-banner {
+    background: url('../../assets/header-background.jpg');
+    height: 485px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+    .content-up {
+        border: 1px solid red;
+        height: 50%;
+        padding-top: 15px;
+
+        .title1 {
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px #333;
+            margin-bottom: 5px;
+            color: #fff;
+            margin-top: 30px;
+        }
+        .title2 {
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px #333;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .search {
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 25px;
+            background: #f7d800;
+
+            i {
+                margin: 0 5px;
+            }
+
+            input {
+                height: 30px;
+                width: 360px;
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    
+    .content-down {
+        border: 1px solid green;
+        height: 50%;
+
+        .options {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+
+            .option-child {
+                width: 125px;
+                text-align: center;
+                border: 1px solid red;
+                cursor: pointer;
+
+                &:hover .text-child {
+                        color: rgb(47, 160, 160);
+                    }
+
+                .icon-child {
+                    background: #fff;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+
+                    i {
+                        color: rgb(47, 160, 160);
+                        font-size: 20px;
+                    }
+                }
+
+                .text-child {
+                    font-size: 17px;
+                    font-weight: 500;
+
+                    
+                }
+            }
+        }
+    }
+    
+}
