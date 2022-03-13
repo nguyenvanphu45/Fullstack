@@ -5,6 +5,8 @@ import Specialty from './Sections/Specialty';
 import MedicalFacility from './Sections/MedicalFacility';
 import OutStandingDoctor from './Sections/OutStandingDoctor';
 import HandBook from './Sections/HandBook';
+import About from './Sections/About';
+import HomeFooter from './HomeFooter';
 import './HomePage.scss'
 
 // Import css files
@@ -29,6 +31,8 @@ class HomePage extends Component {
                 <MedicalFacility settings={settings} />
                 <OutStandingDoctor settings={settings} />
                 <HandBook settings={settings} />
+                <About />
+                <HomeFooter />
             </div>
         );
     }
