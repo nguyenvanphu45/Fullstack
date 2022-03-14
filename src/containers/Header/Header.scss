@@ -15,9 +15,41 @@
         padding: 0 10px;
         &:hover {
             background-color: darken($colormain, 5);
+            color: #5fecb8;
         }
         i {
             font-size: $base-size + 1px;
+        }
+    }
+
+    .languages {
+
+        .language-en {
+            margin-right: 15px;
+            margin-left: 10px;
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+                color: #5fecb8;
+            }
+
+            &:hover {
+                color: #5fecb8;
+            }
+        }
+
+        .language-vi {
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+                color: #5fecb8;
+            }
+
+            &:hover {
+                color: #5fecb8;
+            }
         }
     }
 }
