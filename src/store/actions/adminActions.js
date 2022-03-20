@@ -1,4 +1,5 @@
-import { getAllCodeService, createNewUserService, getAllUsers, deleteUserService } from '../../services/userService';
+import { getAllCodeService, createNewUserService,
+    getAllUsers, deleteUserService, editUserService } from '../../services/userService';
 import actionTypes from './actionTypes';
 import { toast } from 'react-toastify';
 
@@ -98,6 +99,7 @@ export const createNewUser = (data) => {
                 dispatch(saveUserSuccess())
                 dispatch(fetchAllUsersStart())
             } else {
+                toast.error("Fetch all users error!")
                 dispatch(saveUserFailed())
             }
         } catch (e) {
@@ -150,10 +152,11 @@ export const deleteAUser = (userId) => {
                 dispatch(deleteUserSuccess())
                 dispatch(fetchAllUsersStart())
             } else {
+                toast.error("Delete the user error!")
                 dispatch(deleteUserFailed())
             }
         } catch (e) {
-            toast.error("Delete the user succeed!")
+            toast.error("Delete the user error!")
             dispatch(deleteUserFailed())
         }
     }
@@ -165,4 +168,32 @@ export const deleteUserSuccess = () => ({
 
 export const deleteUserFailed = () => ({
     type: actionTypes.DELETE_USER_FAILED
+})
+
+// Edit
+export const editAUser = (data) => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await editUserService(data)
+            if (res && res.errCode === 0) {
+                toast.success("Update the user succeed!")
+                dispatch(editUserSuccess())
+                dispatch(fetchAllUsersStart())
+            } else {
+                toast.error("Update the user error!")
+                dispatch(editUserFailed())
+            }
+        } catch (e) {
+            toast.error("Update the user error!")
+            dispatch(editUserFailed())
+        }
+    }
+}
+
+export const editUserSuccess = () => ({
+    type: actionTypes.EDIT_USER_SUCCESS
+})
+
+export const editUserFailed = () => ({
+    type: actionTypes.EDIT_USER_FAILED
 })
