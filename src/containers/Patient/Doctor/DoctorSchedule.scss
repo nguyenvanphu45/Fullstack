@@ -1,5 +1,5 @@
 .doctor-schedule-container {
-    border-right: 1px solid grey;
+    border-right: 1px solid #ddd;
     height: 100%;
 
     .all-schedule {
@@ -13,7 +13,6 @@
             padding: 10px 0;
             color: #333ab7;
             font-weight: 600;
-            font-size: 16px;
 
             option {
                 cursor: pointer;
@@ -33,25 +32,44 @@
         }
 
         .time-content {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            
+            .time-content-btns {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
 
-            button {
-                padding: 8px 10px;
-                border: none;
-                outline: none;
-                background-color: #fff04b;
-                min-width: 120px;
-                border-radius: 3px;
-                font-weight: 600;
-                color: #333;
-                transition: 0.3ms all ease-in-out;
-
-                &:hover {
-                    background-color: #45c3b2;
-                    color: #fff;
+                button {
+                    padding: 8px 10px;
+                    border: none;
+                    outline: none;
+                    background-color: #fff04b;
+                    min-width: 120px;
+                    border-radius: 3px;
+                    font-weight: 600;
+                    color: #333;
+                    transition: 0.3ms all ease-in-out;
+                
+                    &:hover {
+                        background-color: #45c3b2;
+                        color: #fff;
+                    }
                 }
+                
+                .btn-vi {
+                    min-width: 120px
+                }
+                
+                .btn-en {
+                    min-width: 160px
+                }
+                
+                .no-schedule {
+                    font-style: italic;
+                }
+            }
+
+            .book-free {
+                margin-top: 12px;
             }
         }
     }
