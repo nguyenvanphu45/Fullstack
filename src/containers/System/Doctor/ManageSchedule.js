@@ -117,7 +117,6 @@ class ManageSchedule extends Component {
             let selectedTime = rangeTime.filter(item => item.isSelected === true)
             if (selectedTime && selectedTime.length > 0) {
                 selectedTime.map((schedule, index) => {
-                    console.log('check schedule: ', schedule)
                     let object = {}
                     object.doctorId = selectedDoctor.value
                     object.date = formattedDate
