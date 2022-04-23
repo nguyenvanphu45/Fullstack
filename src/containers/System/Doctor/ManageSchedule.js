@@ -135,11 +135,10 @@ class ManageSchedule extends Component {
             formattedDate: formattedDate
         })
 
-        if (res && res.errorCode === 0) {
+        if (res && res.errCode === 0) {
             toast.success('Save Infor succeed!')
         } else {
             toast.error("Error saveBulkScheduleDoctor !")
-            console.log('Error saveBulkScheduleDoctor >>> res: ', res)
         }
     }
     
