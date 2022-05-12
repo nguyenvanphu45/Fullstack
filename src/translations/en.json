@@ -94,6 +94,10 @@
             "price": "Price: "
         }
     },
+    "specialty": {
+        "detail": "Read more",
+        "hide": "Hide"
+    },
     "admin": {
         "manage-doctor": {
             "title": "Create more doctor information",

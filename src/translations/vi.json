@@ -94,6 +94,10 @@
             "price": "Giá khám: "
         }
     },
+    "specialty": {
+        "detail": "Đọc thêm",
+        "hide": "Ẩn bớt"
+    },
     "admin": {
         "manage-doctor": {
             "title": "Tạo thêm thông tin bác sỹ",
