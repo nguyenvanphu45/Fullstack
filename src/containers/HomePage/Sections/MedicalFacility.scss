@@ -1,0 +1,15 @@
+.clinic-child {
+    cursor: pointer;
+    transition: 3ms all ease-in-out;
+
+    .clinic-name {
+        padding: 10px 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: #111;
+    }
+
+    &:hover .clinic-name {
+        color: #38a4a4;
+    }
+}
